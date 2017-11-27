@@ -6,7 +6,7 @@
   //run
 		java -cp .:jdbc.jar Jdbcconnector
 */
-//test github
+//test github testasfafasd
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
