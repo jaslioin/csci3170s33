@@ -6,7 +6,7 @@
   //run
 		java -cp .:jdbc.jar Jdbcconnector
 */
-
+//test github
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -25,7 +25,7 @@ public class Jdbcconnector {
             //get connection
             conn = DriverManager.getConnection("jdbc:mysql://appsrvdb.cse.cuhk.edu.hk/CSCI3170S39", "CSCI3170S39", "GPA4.0^_^");
             /*
-                Statement stmt  = conn.createStatement();          
+                Statement stmt  = conn.createStatement();
                 stmt.execute("DROP TABLE IF EXISTS category");
                 stmt.close();
              */
@@ -41,7 +41,7 @@ public class Jdbcconnector {
                 int menuCmd = in.nextInt();
                 switch (menuCmd) {
                     case 1:
-                        while (true) {                           
+                        while (true) {
                             System.out.println("********ADMIN********");
                             System.out.println("1.Create all tables");
                             System.out.println("2.Delete all tables");
@@ -56,15 +56,15 @@ public class Jdbcconnector {
                                 case 1:
                                     //operation
                                     System.out.println("......Doint job......");
-                                    
+
                                     stmt = conn.createStatement();
-                                    
+
                                     //create book
                                     String createStatement = "CREATE TABLE book "
                                             + "(call_number VARCHAR(8), "
                                             + " title INT(1), "
-                                            + " publish_date DATE, "                                            
-                                            + " PRIMARY KEY ( call_number ))";                                    
+                                            + " publish_date DATE, "
+                                            + " PRIMARY KEY ( call_number ))";
                                     stmt.execute(createStatement);
                                     //create category
                                     createStatement = "CREATE TABLE";
@@ -82,7 +82,7 @@ public class Jdbcconnector {
                                     createStatement = "CREATE TABLE";
                                     stmt.execute(createStatement);
                                     //done
-                                    stmt.close();                                    
+                                    stmt.close();
                                     System.out.println("......Done......");
                                     break;
                                 case 2:
@@ -99,11 +99,11 @@ public class Jdbcconnector {
                                     System.out.println("Not done yet");
                                     break;
                                 default:
-                                    break;                                
+                                    break;
                             }
                             if(returnIndicator==1)
                                 break;
-                            
+
                         }
                     case 2:
                         System.out.println("Not done yet");
@@ -130,5 +130,3 @@ public class Jdbcconnector {
     }
 
 }
-
-
